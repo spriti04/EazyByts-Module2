@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trading System</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <!-- Login Section -->
+     <div id="login-section" class="card">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="login-msg"></p>
+        <p>Don't have an account? 
+           <span class="link-btn" onclick="showRegister()">Register</span>
+       </p>
+
+     </div>
+
+     <!-- Registration Section -->
+      <div id="register-section" class="card hidden">
+        <h2>Register</h2>
+        <input type="text" id="reg-username" placeholder="Username">
+        <input type="email" id="reg-email" placeholder="Email">
+        <input type="password" id="reg-password" placeholder="Password">
+        <select id="reg-role">
+            <option value="USER">USER</option>
+            <option value="ADMIN">ADMIN</option>
+        </select>
+        <button onclick="register()">Register</button>
+        <p id="register-msg"></p>
+        <p>Already have an account? 
+           <span class="link-btn" onclick="showLogin()">Login</span>
+       </p>
+
+      </div>
+
+     <!-- Dashboard Section -->
+      <div id="dashboard" class="hidden">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <p>Balance: 100000<span id="balance"></span></p>
+
+        <button onclick="showPortfolio()">Portfolio</button>
+        <button onclick="showTransactions()">Transactions</button>
+        <button onclick="showTrades()">Trades</button>
+
+        <!-- Trading Form -->
+         <div class="card">
+            <h3>Trade Stocks</h3>
+            <input type="text" id="symbol" placeholder="Stock Symbol">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <button onclick="buyStock()">Buy</button>
+            <button onclick="sellStock()">Sell</button>
+            <p id="trade-msg"></p>
+         </div>
+
+         <!-- Results Section -->
+          <div id="results" class="card"></div>
+      </div>
+
+      <script src="/js/script.js"></script>
+</body>
+</html>
