@@ -26,7 +26,6 @@ This system provides a secure and interactive platform for users to experience t
 - Show profit/loss based on market value
 
 ### 📊 Admin Features (optional)
-- Add new stocks with initial price and quantity
 - Update stock details
 - Monitor all users’ activities
 
